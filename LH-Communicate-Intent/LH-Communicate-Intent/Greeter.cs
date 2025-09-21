@@ -11,6 +11,8 @@ internal class Greeter
     
     public string Greet(string name)
     {
+        ArgumentNullException.ThrowIfNull(name);
+
         var hour = _datetimeProvider.GetDateTime().Hour;
         string template = string.Empty;
         if (hour.IsBetween(7, 13))
