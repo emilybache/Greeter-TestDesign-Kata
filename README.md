@@ -1,8 +1,9 @@
-# Communicate intention
+Greeter Test Design Kata
+=========================
 
-Work with this repository to improve the readability of these test cases, by being more explicit about what's relevant for the tests at hand.
+Work with the test code to improve the readability, by being more explicit about what's relevant for the tests at hand. The focus is on improving the way the tests communicate intent.
 
-## Exercises
-1. Refactor the tests in `Tests.cs` so they express intent more clearly
-2. Add a new test to validate the case when the name is empty or null (one of them is enough)
-3. If you have spare time, play with [parameterized tests](https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/)
+You could also add a new test for when the name is empty, and/or use parameterized testing.
+
+# Acknowledgements
+This exercise was designed by Xavi Ametller and originall published on [his github](https://github.com/xrecoba/Communicate-Intent-LH)

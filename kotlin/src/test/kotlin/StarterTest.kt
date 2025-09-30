@@ -9,8 +9,8 @@ class StarterTest {
 
     @Test
     fun goodMorning() {
-        val provider = mock<IDateTimeProvider>()
-        whenever(provider.getDateTime()).thenReturn(LocalDateTime.of(2000, 1, 1, 7, 0, 0))
+        val provider = dateTimeWithHour(7)
+
         val greeter = Greeter(provider)
 
         assertEquals("Good morning Arnau", greeter.greet("Arnau"))
@@ -18,8 +18,7 @@ class StarterTest {
 
     @Test
     fun inTheAfternoon() {
-        val provider = mock<IDateTimeProvider>()
-        whenever(provider.getDateTime()).thenReturn(LocalDateTime.of(2000, 1, 1, 16, 0, 0))
+        val provider = dateTimeWithHour(16)
         val greeter = Greeter(provider)
 
         assertEquals("Good afternoon Arnau", greeter.greet("Arnau"))
@@ -27,10 +26,15 @@ class StarterTest {
 
     @Test
     fun afterTheAfternoon() {
-        val provider = mock<IDateTimeProvider>()
-        whenever(provider.getDateTime()).thenReturn(LocalDateTime.of(2000, 1, 1, 0, 0, 0))
+        val provider = dateTimeWithHour(0)
         val greeter = Greeter(provider)
 
         assertEquals("Good night Arnau", greeter.greet("Arnau"))
+    }
+
+    private fun dateTimeWithHour(hour: Int): IDateTimeProvider {
+        val provider = mock<IDateTimeProvider>()
+        whenever(provider.getDateTime()).thenReturn(LocalDateTime.of(2000, 1, 1, hour, 0, 0))
+        return provider
     }
 }
