@@ -6,4 +6,4 @@ Work with the test code to improve the readability, by being more explicit about
 You could also add a new test for when the name is empty, and/or use parameterized testing.
 
 # Acknowledgements
-This exercise was designed by Xavi Ametller and originall published on [his github](https://github.com/xrecoba/Communicate-Intent-LH)
+This exercise was designed by Xavi Ametller and originaly published on [his github](https://github.com/xrecoba/Communicate-Intent-LH)
